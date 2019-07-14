@@ -4,7 +4,7 @@
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: X9Q8S
+> - Code: 292M2
 
 > 这套设置在6v1(不包含源氏猎空···)并且队友有沟通配合良好的状态下平衡. 
 
