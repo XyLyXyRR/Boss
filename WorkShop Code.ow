@@ -10,9 +10,9 @@ rule("Author: XYLyXyRR")
 		Set Global Variable(A, Players In Slot(0, Team 2));
 		Create HUD Text(All Players(All Teams), Hero Icon String(Hero Of(Global Variable(A))), Players On Hero(Hero Of(Global Variable(A)),
 			Team 2), String("{0} {1}", String("{0} -> {1}", Health(Global Variable(A)), Ultimate Charge Percent(Global Variable(A)), Null),
-			String("{0}!", Global Variable(B), Null, Null), Null), Left, -1.000, Red, Red, White, Visible To and String);
+			String("{0}!", Global Variable(B), Null, Null), Null), Left, 0, Red, Red, White, Visible To and String);
 		Create HUD Text(All Players(All Teams), Hero Icon String(Hero(Mercy)), Players On Hero(Hero(Mercy), Team 1), String("{0}!", String(
-			"Protect", Null, Null, Null), Null, Null), Left, 0, Blue, Blue, Blue, Visible To and String);
+			"Protect", Null, Null, Null), Null, Null), Left, 1, Blue, Blue, Blue, Visible To and String);
 	}
 }
 
@@ -112,7 +112,7 @@ rule("Invisible skill.1")
 
 	conditions
 	{
-		Global Variable(D) >= 0;
+		Global Variable(D) > 0;
 	}
 
 	actions
