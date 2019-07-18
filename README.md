@@ -6,7 +6,7 @@
 > - Author: `XyLyXyRR`
 > - Code: G9BE5
 
-> 这套设置在6v1(不包含源氏猎空···)并且队友有沟通配合良好的状态下平衡. 
+> 一套平衡的Boss设置, Boss击杀天使两次可打响指. 
 
 ### Description
 
