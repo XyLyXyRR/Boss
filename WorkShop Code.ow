@@ -88,7 +88,7 @@ rule("Invisible skill")
 
 	actions
 	{
-		Set Slow Motion(40);
+		Set Slow Motion(30);
 		Big Message(All Players(All Teams), String("Caution", Null, Null, Null));
 		Modify Global Variable(B, Subtract, 1);
 		Set Global Variable(C, Random Value In Array(All Living Players(Team 1)));
