@@ -83,14 +83,14 @@ rule("Invisible skill")
 	conditions
 	{
 		Is Communicating(All Players(Team 2), Ultimate Status) == True;
-		Global Variable(B) >= 1;
+		disabled Global Variable(B) >= 1;
 	}
 
 	actions
 	{
 		Set Slow Motion(30);
 		Big Message(All Players(All Teams), String("Caution", Null, Null, Null));
-		Modify Global Variable(B, Subtract, 1);
+		disabled Modify Global Variable(B, Subtract, 1);
 		Set Global Variable(C, Random Value In Array(All Living Players(Team 1)));
 		Set Healing Received(Global Variable(C), 0);
 		Set Status(Global Variable(C), Random Value In Array(All Players(Team 2)), Burning, 9999);
@@ -119,10 +119,7 @@ rule("Invisible skill.1")
 	{
 		Play Effect(All Players(All Teams), Ring Explosion, Red, Global Variable(C), 5);
 		Play Effect(All Players(All Teams), Bad Explosion, Red, Global Variable(C), 5);
-		Play Effect(All Players(All Teams), Ring Explosion Sound, Red, Global Variable(C), 5);
-		Play Effect(All Players(All Teams), Debuff Impact Sound, Red, Global Variable(C), 5);
-		Play Effect(All Players(All Teams), Buff Explosion Sound, Red, Global Variable(C), 5);
-		Play Effect(All Players(All Teams), Explosion Sound, Red, Global Variable(C), 5);
+		Play Effect(All Players(All Teams), Explosion Sound, Red, Global Variable(C), 100);
 		Modify Global Variable(D, Subtract, 0.200);
 		Wait(0.200, Ignore Condition);
 		Loop If Condition Is True;

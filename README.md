@@ -4,7 +4,7 @@
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: BRDSW
+> - Code: EBSKR
 
 > 一套平衡的Boss设置, Boss击杀天使两次可打响指. 
 
