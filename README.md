@@ -1,6 +1,6 @@
 # 猪锤Boss
 
-> [熔火工坊](https://www.owmod.net/work/view/226) [GitHub](https://github.com/XyLyXyRR/Boss)
+> [熔火工坊](https://owmod.net/226) [GitHub](https://github.com/XyLyXyRR/Boss)
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
