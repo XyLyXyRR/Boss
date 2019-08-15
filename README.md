@@ -2,6 +2,8 @@
 
 [熔火工坊](https://owmod.net/362)  [GitHub](https://github.com/XyLyXyRR/Genji-s-bug-Dragonblade)
 
+![源氏Bug刀-封面.png](https://i.loli.net/2019/08/15/L59Y7dHJbCDGys1.png)
+
 (一串奇怪的代码引发的奇怪bug...我也不知道怎么搞得, 本来是想做倒计时的......
 
 - Code: `QVYEX`
