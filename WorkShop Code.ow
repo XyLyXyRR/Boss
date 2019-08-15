@@ -46,9 +46,35 @@ rule("Mercy")
 		Mercy;
 	}
 
+	conditions
+	{
+		Is Alive(Event Player) == True;
+	}
+
 	actions
 	{
 		Create Effect(All Players(All Teams), Sparkles, Blue, Players On Hero(Hero(Mercy), All Teams), 1, Visible To Position and Radius);
+		Set Player Variable At Index(Event Player, A, 0, Last Created Entity);
+	}
+}
+
+rule("Mercy.")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Mercy;
+	}
+
+	conditions
+	{
+		Is Alive(Event Player) == False;
+	}
+
+	actions
+	{
+		Destroy Effect(Index Of Array Value(Player Variable(Event Player, A), 0));
 	}
 }
 
