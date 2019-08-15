@@ -56,7 +56,7 @@ rule("Mercy by killed")
 {
 	event
 	{
-		Player earned elimination;
+		Player Earned Elimination;
 		Team 2;
 		All;
 	}
@@ -124,5 +124,84 @@ rule("Invisible skill.1")
 		Modify Global Variable At Index(A, 3, Subtract, 0.200);
 		Wait(0.200, Ignore Condition);
 		Loop If Condition Is True;
+	}
+}
+
+rule("Genji-s-bug-Dragonblade 1")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Genji;
+	}
+
+	actions
+	{
+		Create HUD Text(Event Player, String("{0} sec", Player Variable(Event Player, A), Null, Null), Null, Null, Left, 0, White, White,
+			White, Visible To and String);
+	}
+}
+
+rule("Genji-s-bug-Dragonblade 2")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Genji;
+	}
+
+	conditions
+	{
+		Is Firing Primary(Event Player) == True;
+	}
+
+	actions
+	{
+		Disallow Button(Event Player, Primary Fire);
+		Set Player Variable(Event Player, B, True);
+		Set Player Variable(Event Player, A, 1);
+	}
+}
+
+rule("Genji-s-bug-Dragonblade 3")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Genji;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, B) == True;
+	}
+
+	actions
+	{
+		Chase Player Variable Over Time(Event Player, A, 0, 0.200, Destination and Duration);
+	}
+}
+
+rule("Genji-s-bug-Dragonblade 4")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Genji;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Allow Button(Event Player, Primary Fire);
+		Set Player Variable(Event Player, B, False);
 	}
 }
