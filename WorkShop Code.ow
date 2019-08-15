@@ -136,22 +136,6 @@ rule("Genji-s-bug-Dragonblade 1")
 		Genji;
 	}
 
-	actions
-	{
-		Create HUD Text(Event Player, String("{0} sec", Player Variable(Event Player, A), Null, Null), Null, Null, Left, 0, White, White,
-			White, Visible To and String);
-	}
-}
-
-rule("Genji-s-bug-Dragonblade 2")
-{
-	event
-	{
-		Ongoing - Each Player;
-		Team 1;
-		Genji;
-	}
-
 	conditions
 	{
 		Is Firing Primary(Event Player) == True;
@@ -165,7 +149,7 @@ rule("Genji-s-bug-Dragonblade 2")
 	}
 }
 
-rule("Genji-s-bug-Dragonblade 3")
+rule("Genji-s-bug-Dragonblade 2")
 {
 	event
 	{
@@ -185,7 +169,7 @@ rule("Genji-s-bug-Dragonblade 3")
 	}
 }
 
-rule("Genji-s-bug-Dragonblade 4")
+rule("Genji-s-bug-Dragonblade 3")
 {
 	event
 	{
