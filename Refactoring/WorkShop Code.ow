@@ -1,0 +1,203 @@
+rule("Author: XYLyXyRR")
+{
+	event
+	{
+		Ongoing - Global;
+	}
+
+	actions
+	{
+		Set Global Variable At Index(A, 0, Players In Slot(0, Team 2));
+		Set Global Variable At Index(A, 1, Hero Of(Value In Array(Global Variable(A), 0)));
+		Set Global Variable At Index(A, 2, Health(Value In Array(Global Variable(A), 0)));
+		Set Global Variable At Index(A, 3, Ultimate Charge Percent(Value In Array(Global Variable(B), 0)));
+		Set Global Variable At Index(B, 0, Players On Hero(Hero(Mercy), Team 1));
+		Set Global Variable At Index(B, 1, Hero(Mercy));
+		Create HUD Text(All Players(All Teams), Hero Icon String(Hero Of(Players In Slot(0, Team 2))), Players In Slot(0, Team 2), String(
+			"{0} {1}", String("{0} -> {1}", Health(Players In Slot(0, Team 2)), Ultimate Charge Percent(Players In Slot(0, Team 2)), Null),
+			String("{0}!", Value In Array(Global Variable(A), 4), Null, Null), Null), Left, 0, Red, Red, White, Visible To and String);
+		Set Global Variable At Index(C, 0, Last Text ID);
+		Create HUD Text(All Players(All Teams), Hero Icon String(Hero(Mercy)), Players On Hero(Hero(Mercy), Team 1), String("{0}!", String(
+			"Secure", Null, Null, Null), Null, Null), Left, 1, Blue, Blue, Blue, Visible To and String);
+		Create Effect(All Players(All Teams), Sparkles, Blue, Players On Hero(Hero(Mercy), Team 1), 1, Visible To Position and Radius);
+		Set Global Variable At Index(B, 2, Last Created Entity);
+	}
+}
+
+rule("Inatialize")
+{
+	event
+	{
+		Ongoing - Global;
+	}
+
+	conditions
+	{
+		Is Waiting For Players == True;
+	}
+
+	actions
+	{
+		Set Global Variable At Index(A, 7, 1);
+	}
+}
+
+rule("Inatialize.1")
+{
+	event
+	{
+		Ongoing - Global;
+	}
+
+	conditions
+	{
+		Is Waiting For Players == False;
+		Value In Array(Global Variable(A), 7) == 1;
+	}
+
+	actions
+	{
+		Set Global Variable At Index(A, 7, 0);
+		Set Global Variable At Index(A, 4, 0);
+	}
+}
+
+rule("Kill")
+{
+	event
+	{
+		Player Earned Elimination;
+		Team 2;
+		All;
+	}
+
+	conditions
+	{
+		Hero(Mercy) == Is Dead(Players On Hero(Hero(Mercy), Team 1));
+	}
+
+	actions
+	{
+		Modify Global Variable At Index(A, 4, Add, 0.500);
+	}
+}
+
+rule("Invisible skill")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 2;
+		All;
+	}
+
+	conditions
+	{
+		Is Communicating(All Players(Team 2), Ultimate Status) == True;
+		Value In Array(Global Variable(A), 4) >= 1;
+	}
+
+	actions
+	{
+		Set Slow Motion(30);
+		Set Aim Speed(All Players(All Teams), 30);
+		Big Message(All Players(All Teams), String("{0}!!", String("Danger", Null, Null, Null), Null, Null));
+		Modify Global Variable At Index(A, 4, Subtract, 1);
+		Set Global Variable At Index(A, 5, Random Value In Array(All Living Players(Team 1)));
+		Set Healing Received(Value In Array(Global Variable(A), 5), 0);
+		Set Status(Value In Array(Global Variable(A), 5), Random Value In Array(All Players(Team 2)), Burning, 9999);
+		Modify Global Variable At Index(A, 6, Add, 2);
+		Wait(2, Ignore Condition);
+		Kill(Value In Array(Global Variable(A), 5), Event Player);
+		Set Slow Motion(100);
+		Set Aim Speed(All Players(All Teams), 100);
+		Set Healing Received(Value In Array(Global Variable(A), 5), 100);
+		Clear Status(Value In Array(Global Variable(A), 5), Burning);
+	}
+}
+
+rule("Invisible skill.1")
+{
+	event
+	{
+		Ongoing - Global;
+	}
+
+	conditions
+	{
+		Value In Array(Global Variable(A), 6) > 0;
+	}
+
+	actions
+	{
+		Play Effect(All Players(All Teams), Ring Explosion, Red, Value In Array(Global Variable(A), 5), 5);
+		Play Effect(All Players(All Teams), Bad Explosion, Red, Value In Array(Global Variable(A), 5), 5);
+		Play Effect(All Players(All Teams), Explosion Sound, Red, Value In Array(Global Variable(A), 5), 100);
+		Modify Global Variable At Index(A, 6, Subtract, 0.200);
+		Wait(0.200, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Genji-s-bug-Dragonblade 1")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Genji;
+	}
+
+	conditions
+	{
+		Is Firing Primary(Event Player) == True;
+	}
+
+	actions
+	{
+		Disallow Button(Event Player, Primary Fire);
+		Set Player Variable(Event Player, B, True);
+		Set Player Variable(Event Player, A, 1);
+	}
+}
+
+rule("Genji-s-bug-Dragonblade 2")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Genji;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, B) == True;
+	}
+
+	actions
+	{
+		Chase Player Variable Over Time(Event Player, A, 0, 0.200, Destination and Duration);
+	}
+}
+
+rule("Genji-s-bug-Dragonblade 3")
+{
+	event
+	{
+		Ongoing - Each Player;
+		Team 1;
+		Genji;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Allow Button(Event Player, Primary Fire);
+		Set Player Variable(Event Player, B, False);
+	}
+}
