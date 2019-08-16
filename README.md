@@ -1,17 +1,19 @@
 # 猪锤Boss
 
+XyLy's Boss settings.
+
 - [熔火工坊](https://owmod.net/226) 
 - [GitHub](https://github.com/XyLyXyRR/Boss)
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: `FHPX5`
+> - Code: `8T662`
 
-一套平衡的Boss设置, Boss击杀天使两次可打响指. 
 
 ### Description
 
-    源氏Bug刀: 连点左键触发, 普通攻击会自动砍一刀, 如果无法做任何动作, 使用`爬墙/近战/技能`可恢复.    Boss击杀天使两次可打一次响指, 随机掐死一个, 按Z键发送终极技能状态触发.
+一套平衡的Boss设置, Boss击杀天使两次可打响指. 
+
 
 ## Boss隐藏技能: 响指!
 
@@ -20,22 +22,29 @@
 - 效果: 随机掐死一个敌人
 
 
-# Genji-s-bug-Dragonblade
+# 超攻速 Bug大
 
 - [熔火工坊](https://owmod.net/362) 
-- [GitHub](https://github.com/XyLyXyRR/Genji-s-bug-Dragonblade)
+- [GitHub](https://github.com/XyLyXyRR/Sas-bugUlti)
 - [bilibili](https://www.bilibili.com/video/av63831013)
 
 ![源氏Bug刀-封面.png](https://i.loli.net/2019/08/15/L59Y7dHJbCDGys1.png)
 
 
-## Bug刀
+## Genji's bug刀
 
-- Code: `3N7WW`
-- 连点左键触发
-- 普通攻击会自动砍一刀  
-- 砍完一刀后无法做任何动作, 使用`爬墙/近战/技能`可恢复
+- Code: `PZF0Z`
+- 不开大普攻也可砍人
+- 砍一刀后无法做任何动作, 可用`爬墙/近战/技能`恢复
 
 
-### Description
-(一串奇怪的代码引发的奇怪bug...我也不知道怎么搞得, 本来是想做倒计时的......
+## Bastion & TORBJÖRN
+
+- 长按互动键开启鬼畜大模式...(Wu...
+
+## 超攻速
+
+- 大部分英雄长按左键可以拥有极快的射速
+- 长按左键触发
+
+![Overwatch 2019.08.16 - 14.50.44.98.mp4_20190816_145450.653.png](https://i.loli.net/2019/08/16/nrqAEj8hp2Od1HI.png)
