@@ -5,7 +5,7 @@
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: `JYP9P`
+> - Code: `S074H`
 
 一套平衡的Boss设置, Boss击杀天使两次可打响指. 
 
@@ -31,8 +31,7 @@
 
 ## Bug刀
 
-- Code: `KYQT8`
-- 在队伍1中进行普通攻击可触发
+- Code: `RHASV`
 - 普通攻击会自动砍一刀  
 - 砍完一刀后无法做任何动作, 使用`爬墙/近战/技能`可恢复
 
