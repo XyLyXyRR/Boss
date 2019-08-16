@@ -1,62 +1,113 @@
-rule("Genji-s-bug-Dragonblade 1")
+rule("规则 1")
 {
 	event
 	{
 		Ongoing - Each Player;
 		All;
-		Genji;
+		Bastion;
 	}
 
 	conditions
 	{
-		Is Firing Primary(Event Player) == True;
+		Is Button Held(Event Player, Interact) == True;
+		Is Button Held(Event Player, Primary Fire) == False;
 	}
 
 	actions
 	{
 		Disallow Button(Event Player, Primary Fire);
-		Set Player Variable(Event Player, B, True);
-		Set Player Variable(Event Player, A, 1);
-	}
-}
-
-rule("Genji-s-bug-Dragonblade 2")
-{
-	event
-	{
-		Ongoing - Each Player;
-		All;
-		Genji;
-	}
-
-	conditions
-	{
-		Player Variable(Event Player, B) == True;
-	}
-
-	actions
-	{
-		Chase Player Variable Over Time(Event Player, A, 0, 0.200, Destination and Duration);
-	}
-}
-
-rule("Genji-s-bug-Dragonblade 3")
-{
-	event
-	{
-		Ongoing - Each Player;
-		All;
-		Genji;
-	}
-
-	conditions
-	{
-		Player Variable(Event Player, A) == 0;
-	}
-
-	actions
-	{
+		Wait(0.016, Ignore Condition);
+		Start Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
 		Allow Button(Event Player, Primary Fire);
-		Set Player Variable(Event Player, B, False);
+		Wait(0.016, Ignore Condition);
+		Stop Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
+	}
+}
+
+rule("规则 2")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Torbjörn;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Interact) == True;
+		Is Button Held(Event Player, Primary Fire) == False;
+	}
+
+	actions
+	{
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Start Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Stop Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("规则 3")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Genji;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Interact) == True;
+		Is Button Held(Event Player, Primary Fire) == False;
+	}
+
+	actions
+	{
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Start Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Stop Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
 	}
 }
