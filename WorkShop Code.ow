@@ -18,7 +18,7 @@ rule("Author: XYLyXyRR")
 			String("{0}!", Value In Array(Global Variable(A), 4), Null, Null), Null), Left, 0, Red, Red, White, Visible To and String);
 		Set Global Variable At Index(C, 0, Last Text ID);
 		Create HUD Text(All Players(All Teams), Hero Icon String(Hero(Mercy)), Players On Hero(Hero(Mercy), Team 1), String("{0}!", String(
-			"Secure", Null, Null, Null), Null, Null), Left, 1, Blue, Blue, Blue, Visible To and String);
+			"Protect", Null, Null, Null), Null, Null), Left, 1, Blue, Blue, Blue, Visible To and String);
 		Create Effect(All Players(All Teams), Sparkles, Blue, Players On Hero(Hero(Mercy), Team 1), 1, Visible To Position and Radius);
 		Set Global Variable At Index(B, 2, Last Created Entity);
 	}
