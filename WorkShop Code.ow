@@ -1,4 +1,4 @@
-rule("规则 1")
+rule("Bastion")
 {
 	event
 	{
@@ -30,7 +30,7 @@ rule("规则 1")
 	}
 }
 
-rule("规则 2")
+rule("TORBJÖRN")
 {
 	event
 	{
@@ -59,7 +59,7 @@ rule("规则 2")
 	}
 }
 
-rule("规则 3")
+rule("Genji")
 {
 	event
 	{
@@ -85,6 +85,9 @@ rule("规则 3")
 		Stop Holding Button(Event Player, Primary Fire);
 		Wait(0.016, Ignore Condition);
 		Loop If Condition Is True;
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
 	}
 }
 
