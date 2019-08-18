@@ -7,7 +7,7 @@ XyLy's Boss settings.
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: `8T662`
+> - Code: `RARGV`
 
 
 ### Description
@@ -33,7 +33,7 @@ XyLy's Boss settings.
 
 ## Genji's bug刀
 
-- Code: `PZF0Z`
+- Code: `ME28V`
 - 不开大普攻也可砍人
 - 砍一刀后无法做任何动作, 可用`爬墙/近战/技能`恢复
 
