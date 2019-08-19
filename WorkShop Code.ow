@@ -189,5 +189,176 @@ rule("Genji")
 		Stop Holding Button(Event Player, Primary Fire);
 		Wait(0.016, Ignore Condition);
 		Loop If Condition Is True;
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
+	}
+}
+
+rule("Speed.Orisa")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Orisa;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed.Wrecking ball")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Wrecking Ball;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed.Bastion")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Bastion;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed.Soldier: 76")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Soldier: 76;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed.Sombra")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Sombra;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed.Tracer")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Tracer;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed.Widowmaker")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Widowmaker;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Primary Fire) == True;
+	}
+
+	actions
+	{
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Set Projectile Speed(Event Player, 100.001);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
 	}
 }
