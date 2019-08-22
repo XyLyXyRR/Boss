@@ -66,14 +66,9 @@ rule("Kill")
 {
 	event
 	{
-		Player Earned Elimination;
-		Team 2;
-		All;
-	}
-
-	conditions
-	{
-		Hero(Mercy) == Is Dead(Players On Hero(Hero(Mercy), Team 1));
+		Player Died;
+		Team 1;
+		Mercy;
 	}
 
 	actions
