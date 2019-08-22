@@ -24,30 +24,6 @@ rule("Author: XyLyXyRR")
 	}
 }
 
-rule("Speed")
-{
-	event
-	{
-		Ongoing - Each Player;
-		All;
-		All;
-	}
-
-	conditions
-	{
-		Is Button Held(Event Player, Primary Fire) == True;
-	}
-
-	actions
-	{
-		Set Projectile Speed(Event Player, 100.001);
-		Wait(0.016, Ignore Condition);
-		Set Projectile Speed(Event Player, 100.001);
-		Wait(0.016, Ignore Condition);
-		Loop If Condition Is True;
-	}
-}
-
 rule("Inatialize")
 {
 	event
@@ -160,38 +136,6 @@ rule("Invisible skill.1")
 		Modify Global Variable At Index(A, 6, Subtract, 0.200);
 		Wait(0.200, Ignore Condition);
 		Loop If Condition Is True;
-	}
-}
-
-rule("Genji")
-{
-	event
-	{
-		Ongoing - Each Player;
-		All;
-		Genji;
-	}
-
-	conditions
-	{
-		Is Button Held(Event Player, Interact) == True;
-		Is Button Held(Event Player, Primary Fire) == False;
-	}
-
-	actions
-	{
-		Disallow Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Start Holding Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Allow Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Stop Holding Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Loop If Condition Is True;
-		Disallow Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Allow Button(Event Player, Primary Fire);
 	}
 }
 

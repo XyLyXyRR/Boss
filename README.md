@@ -2,17 +2,17 @@
 
 XyLy's Boss settings.
 
-- [熔火工坊](https://owmod.net/226) 
+- [熔火工坊](https://owmod.net/226)
 - [GitHub](https://github.com/XyLyXyRR/Boss)
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: `VEFBP`
+> - Code: `EH6Q6`
 
 
 ### Description
 
-一套平衡的Boss设置, Boss击杀天使两次可打响指. 
+一套平衡的Boss设置, Boss击杀天使两次可打响指.
 
 
 ## Boss隐藏技能: 响指!
@@ -24,7 +24,7 @@ XyLy's Boss settings.
 
 # 超攻速 Bug大
 
-- [熔火工坊](https://owmod.net/362) 
+- [熔火工坊](https://owmod.net/362)
 - [GitHub](https://github.com/XyLyXyRR/Sas-bugUlti)
 - [bilibili](https://www.bilibili.com/video/av63831013)
 
