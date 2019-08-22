@@ -1,6 +1,6 @@
 # 超攻速 Bug大
 
-- [熔火工坊](https://owmod.net/362) 
+- [熔火工坊](https://owmod.net/362)
 - [GitHub](https://github.com/XyLyXyRR/Sas-bugUlti)
 - [bilibili](https://www.bilibili.com/video/av63831013)
 
@@ -11,9 +11,8 @@
 
 ## Genji's bug刀
 
-- Code: `ME28V`
-- 不开大普攻也可砍人
-- 砍一刀后无法做任何动作, 可用`爬墙/近战/技能`恢复
+- Code: `8WJ6K`
+- 互动键砍人, 砍一刀后无法做任何动作, 可用`爬墙/近战/技能`恢复
 
 
 ## Bastion & Torbjörn
@@ -38,6 +37,6 @@
   - Zenyatta
     - 右键蓄两颗以上时, `长按左键 松开右键` 触发
 - 长按左键触发
-  - 除Genji和和尚以外都只有动画, 伤害并无增加
+  - 部分英雄只有动画, 伤害并无增加
 
 ![Overwatch 2019.08.19 - 15.10.38.31.mp4_20190819_161510.141.png](https://i.loli.net/2019/08/19/crKT8ERU7zoZW1C.png)

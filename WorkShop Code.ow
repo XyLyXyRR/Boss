@@ -30,7 +30,7 @@ rule("Bastion")
 	}
 }
 
-rule("TORBJÖRN")
+rule("Torbjörn")
 {
 	event
 	{
