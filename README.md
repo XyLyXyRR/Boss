@@ -7,7 +7,7 @@ XyLy's Boss settings.
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: `61GNF`
+> - Code: `H5EWJ`
 
 
 ### Description
@@ -15,7 +15,7 @@ XyLy's Boss settings.
 一套平衡的Boss设置, Boss击杀天使两次可打响指.
 
 
-## Boss隐藏技能: 响指!
+### Boss隐藏技能: 响指!
 
 - 条件: 击杀天使两次  
 - 触发: 按Z键 发送终极技能状态  
@@ -35,9 +35,8 @@ XyLy's Boss settings.
 
 ## Genji's bug刀
 
-- Code: `ME28V`
-- 不开大普攻也可砍人
-- 砍一刀后无法做任何动作, 可用`爬墙/近战/技能`恢复
+- Code: `8WJ6K`
+- 互动键砍人, 砍一刀后无法做任何动作, 可用`爬墙/近战/技能`恢复
 
 
 ## Bastion & Torbjörn
@@ -62,6 +61,6 @@ XyLy's Boss settings.
   - Zenyatta
     - 右键蓄两颗以上时, `长按左键 松开右键` 触发
 - 长按左键触发
-  - 除Genji和和尚以外都只有动画, 伤害并无增加
+  - 部分英雄只有动画, 伤害并无增加
 
 ![Overwatch 2019.08.19 - 15.10.38.31.mp4_20190819_161510.141.png](https://i.loli.net/2019/08/19/crKT8ERU7zoZW1C.png)
