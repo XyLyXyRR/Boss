@@ -49,17 +49,10 @@ XyLy's Boss settings.
   - Orisa
   - Wrecking ball
   - Bastion
-  - Genji
   - Soldier:76
   - Sombra
   - Tracer
   - Widowmaker
-  - Baptiste
-  - Lucio
-  - Mercy
-    - 枪声爆音
-  - Zenyatta
-    - 右键蓄两颗以上时, `长按左键 松开右键` 触发
 - 长按左键触发
   - 部分英雄只有动画, 伤害并无增加
 
