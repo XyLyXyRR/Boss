@@ -35,7 +35,7 @@ XyLy's Boss settings.
 
 ## Genji's bug刀
 
-- Code: `8WJ6K`
+- Code: `50THN`
 - 互动键砍人, 砍一刀后无法做任何动作, 可用`爬墙/近战/技能`恢复
 
 
