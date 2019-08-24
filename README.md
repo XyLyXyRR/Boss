@@ -7,7 +7,7 @@ XyLy's Boss settings.
 
 > - Name: 猪锤Boss
 > - Author: `XyLyXyRR`
-> - Code: `H5EWJ`
+> - Code: `99E6X`
 
 
 ### Description

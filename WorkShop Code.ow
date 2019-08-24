@@ -19,8 +19,105 @@ rule("Author: XyLyXyRR")
 		Set Global Variable At Index(C, 0, Last Text ID);
 		Create HUD Text(All Players(All Teams), Hero Icon String(Hero(Mercy)), Players On Hero(Hero(Mercy), Team 1), String("{0}!", String(
 			"Protect", Null, Null, Null), Null, Null), Left, 1, Blue, Blue, Blue, Visible To and String);
+		Set Global Variable At Index(C, 1, Last Text ID);
 		Create Effect(All Players(All Teams), Sparkles, Blue, Players On Hero(Hero(Mercy), Team 1), 1, Visible To Position and Radius);
 		Set Global Variable At Index(B, 2, Last Created Entity);
+	}
+}
+
+rule("Player.1")
+{
+	event
+	{
+		Player Dealt Healing;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} + {1}", Hero Icon String(Hero Of(Event Player)), String("{0} - {1}", Event Healing, Null,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
+	}
+}
+
+rule("Player.2")
+{
+	event
+	{
+		Player Received Healing;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} - {1}", Hero Icon String(Hero Of(Event Player)), String("{0} - {1}", Event Healing, Null,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
+	}
+}
+
+rule("Player.3")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} - {1}", Hero Icon String(Hero Of(Event Player)), String("{0} + {1}", Null, Event Damage,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
+	}
+}
+
+rule("Player.4")
+{
+	event
+	{
+		Player Took Damage;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} - {1}", Hero Icon String(Hero Of(Event Player)), String("{0} - {1}", Null, Event Damage,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
 	}
 }
 
