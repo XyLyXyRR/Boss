@@ -1,3 +1,99 @@
+rule("Player.1")
+{
+	event
+	{
+		Player Dealt Healing;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} + {1}", Hero Icon String(Hero Of(Event Player)), String("{0} - {1}", Event Healing, Null,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
+	}
+}
+
+rule("Player.2")
+{
+	event
+	{
+		Player Received Healing;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} - {1}", Hero Icon String(Hero Of(Event Player)), String("{0} - {1}", Event Healing, Null,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
+	}
+}
+
+rule("Player.3")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} - {1}", Hero Icon String(Hero Of(Event Player)), String("{0} + {1}", Null, Event Damage,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
+	}
+}
+
+rule("Player.4")
+{
+	event
+	{
+		Player Took Damage;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Player Variable(Event Player, A) == 0;
+	}
+
+	actions
+	{
+		Small Message(Event Player, String("{0} - {1}", Hero Icon String(Hero Of(Event Player)), String("{0} - {1}", Null, Event Damage,
+			Null), Null));
+		Modify Global Variable(A, Add, 1);
+		Wait(1, Ignore Condition);
+		Modify Global Variable(A, Subtract, 1);
+	}
+}
+
 rule("Bastion")
 {
 	event
