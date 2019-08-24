@@ -187,6 +187,61 @@ rule("Genji")
 	}
 }
 
+rule("Hanzo")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Hanzo;
+	}
+
+	conditions
+	{
+		Is Button Held(Event Player, Interact) == True;
+		Is Button Held(Event Player, Primary Fire) == False;
+	}
+
+	actions
+	{
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Start Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Stop Holding Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
+	}
+}
+
+rule("fix.")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Is Crouching(Event Player) == True;
+		Is Communicating(Event Player, Acknowledge) == True;
+	}
+
+	actions
+	{
+		Disallow Button(Event Player, Primary Fire);
+		Wait(0.016, Ignore Condition);
+		Allow Button(Event Player, Primary Fire);
+	}
+}
+
 rule("Speed")
 {
 	event
