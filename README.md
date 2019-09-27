@@ -1,7 +1,7 @@
 # 超攻速 Bug大
 
 - [熔火工坊](https://owmod.net/362)
-- [GitHub](https://github.com/XyLyXyRR/Sas-bugUlti)
+- [GitHub](https://github.com/XyLyXyRR/Boss/tree/Sas-bugUlti)
 - [bilibili](https://www.bilibili.com/video/av63831013)
 
 > 那位给我代码的老哥名字我没记...100多级的文什么什么...我只发现了源氏可以这么玩, 他告诉我经过粗略的测试, 只有`堡垒 托比昂 源氏`可以. 后面的超攻速也是他自己想到的
