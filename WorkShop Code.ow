@@ -15,10 +15,11 @@ rule("Author: XyLyXyRR")
 		Set Global Variable At Index(B, 1, Hero(Mercy));
 		Create HUD Text(All Players(All Teams), Hero Icon String(Hero Of(Players In Slot(0, Team 2))), Players In Slot(0, Team 2), String(
 			"{0} {1}", String("{0} -> {1}", Health(Players In Slot(0, Team 2)), Ultimate Charge Percent(Players In Slot(0, Team 2)), Null),
-			String("{0}!", Value In Array(Global Variable(A), 4), Null, Null), Null), Left, 0, Red, Red, White, Visible To and String);
+			String("{0}!", Value In Array(Global Variable(A), 4), Null, Null), Null), Left, 0, Red, Red, White, Visible To and String,
+			Default Visibility);
 		Set Global Variable At Index(C, 0, Last Text ID);
 		Create HUD Text(All Players(All Teams), Hero Icon String(Hero(Mercy)), Players On Hero(Hero(Mercy), Team 1), String("{0}!", String(
-			"Protect", Null, Null, Null), Null, Null), Left, 1, Blue, Blue, Blue, Visible To and String);
+			"Protect", Null, Null, Null), Null, Null), Left, 1, Blue, Blue, Blue, Visible To and String, Default Visibility);
 		Set Global Variable At Index(C, 1, Last Text ID);
 		Create Effect(All Players(All Teams), Sparkles, Blue, Players On Hero(Hero(Mercy), Team 1), 1, Visible To Position and Radius);
 		Set Global Variable At Index(B, 2, Last Created Entity);
@@ -233,38 +234,6 @@ rule("Invisible skill.1")
 		Modify Global Variable At Index(A, 6, Subtract, 0.200);
 		Wait(0.200, Ignore Condition);
 		Loop If Condition Is True;
-	}
-}
-
-rule("Genji")
-{
-	event
-	{
-		Ongoing - Each Player;
-		All;
-		Genji;
-	}
-
-	conditions
-	{
-		Is Button Held(Event Player, Interact) == True;
-		Is Button Held(Event Player, Primary Fire) == False;
-	}
-
-	actions
-	{
-		Disallow Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Start Holding Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Allow Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Stop Holding Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Loop If Condition Is True;
-		Disallow Button(Event Player, Primary Fire);
-		Wait(0.016, Ignore Condition);
-		Allow Button(Event Player, Primary Fire);
 	}
 }
 
